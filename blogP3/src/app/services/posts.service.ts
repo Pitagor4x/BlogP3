@@ -6,8 +6,8 @@ import { Post } from '../interfaces/post.interface';
   providedIn: 'root'
 })
 export class PostsService {
-  arrPost: Post[] = [];
-  categories: Category[] = [];
+  private arrPost: Post[] = [];
+  private categories: Category[] = [];
 
   constructor() {
     this.categories = [
