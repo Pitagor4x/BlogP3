@@ -9,5 +9,70 @@ export class PostsService {
   arrPost: Post[] = [];
   categories: Category[] = [];
 
-  constructor() { }
+  constructor() {
+    this.categories = [
+      { titulo: 'Noticias' },
+      { titulo: 'Viajes' },
+      { titulo: 'Videos' },
+      { titulo: 'Imagenes' },
+      { titulo: 'Musica' },
+    ]
+
+    this.arrPost = [
+      {
+        id: 1,
+        titulo: 'string',
+        texto: 'string',
+        autor: 'string',
+        imagen: '../../assets/images/ER-avatars-5.jpg',
+        fecha: 'string',
+        categoria: 'string',
+      },
+      {
+        id: 2,
+        titulo: 'string',
+        texto: 'string',
+        autor: 'string',
+        imagen: '../../assets/images/ER-avatars-5.jpg',
+        fecha: 'string',
+        categoria: 'string',
+      },
+      {
+        id: 3,
+        titulo: 'string',
+        texto: 'string',
+        autor: 'string',
+        imagen: '../../assets/images/ER-avatars-5.jpg',
+        fecha: 'string',
+        categoria: 'string',
+      },
+      {
+        id: 4,
+        titulo: 'string',
+        texto: 'string',
+        autor: 'string',
+        imagen: '../../assets/images/ER-avatars-5.jpg',
+        fecha: 'string',
+        categoria: 'string',
+      },
+      {
+        id: 5,
+        titulo: 'string',
+        texto: 'string',
+        autor: 'string',
+        imagen: '../../assets/images/ER-avatars-5.jpg',
+        fecha: 'string',
+        categoria: 'string',
+      },
+      {
+        id: 1,
+        titulo: 'string',
+        texto: 'string',
+        autor: 'string',
+        imagen: '../../assets/images/ER-avatars-5.jpg',
+        fecha: 'string',
+        categoria: 'string',
+      },
+    ]
+  }
 }
