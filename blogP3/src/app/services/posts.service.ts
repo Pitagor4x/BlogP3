@@ -75,4 +75,7 @@ export class PostsService {
       },
     ]
   }
+  getAllCategories(): Category[] {
+    return this.categories
+  }
 }
