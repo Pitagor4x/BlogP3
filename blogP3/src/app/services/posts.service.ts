@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { __param } from 'tslib';
 import { Category } from '../interfaces/category.interface';
 import { Post } from '../interfaces/post.interface';
 
@@ -67,7 +68,7 @@ export class PostsService {
       {
         id: 6,
         titulo: 'Castillo Velotormenta',
-        texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nulla, esse deleniti cum veritatis, harum, enim totam fuga voluptate facere vel pariatur quas illo impedit! Quia cum hic laudantium quam sed aperiam explicabo ipsam velit consectetur sint ipsa doloribus dolore harum consequatur nostrum iure nam error accusantium quas, quasi assumenda illo nisi? Tempora, optio. Labore fugiat iusto ratione perspiciatis at tenetur saepe explicabo odit quos commodi quo, ipsum quasi nobis blanditiis esse? Excepturi porro quam quisquam sequi rem voluptatem eaque quaerat, fuga obcaecati incidunt eveniet in dolorum quis est aut ipsum neque expedita. Quod ullam natus soluta ab atque voluptate!',
+        texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nulla, esse deleniti cum veritatis, harum, enim totam fuga voluptate facere vel pariatur quas illo impedit! Quia cum hic laudantium quam sed aperiam explicabo ipsam velit consectetur sint ipsa doloribus dolore harum consequatur nostrum iure nam error accusantium quas, quasi assumenda illo nisi? Tempora, optio.Labore fugiat iusto ratione perspiciatis at tenetur saepe explicabo odit quos commodi quo, ipsum quasi nobis blanditiis esse? Excepturi porro quam quisquam sequi rem voluptatem eaque quaerat, fuga obcaecati incidunt eveniet in dolorum quis est aut ipsum neque expedita. Quod ullam natus soluta ab atque voluptate!',
         autor: 'Pedro Bustamante',
         imagen: '../../assets/images/post6.jpg',
         fecha: '01/01/22',
@@ -75,10 +76,16 @@ export class PostsService {
       },
     ]
   }
+
   getAllCategories(): Category[] {
     return this.categories
   }
+
   getAllPosts() {
     return this.arrPost
+  }
+
+  getById(pId: number): Post | any {
+    return this.arrPost.find(post => post.id == pId)
   }
 }
