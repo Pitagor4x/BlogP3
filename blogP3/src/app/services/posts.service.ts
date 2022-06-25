@@ -78,4 +78,7 @@ export class PostsService {
   getAllCategories(): Category[] {
     return this.categories
   }
+  getAllPosts() {
+    return this.arrPost
+  }
 }
