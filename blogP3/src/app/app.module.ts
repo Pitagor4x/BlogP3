@@ -8,6 +8,7 @@ import { NewComponent } from './components/new/new.component';
 import { PostComponent } from './components/post/post.component';
 import { CategoryComponent } from './components/category/category.component';
 import { Error404Component } from './components/error404/error404.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Error404Component } from './components/error404/error404.component';
     NewComponent,
     PostComponent,
     CategoryComponent,
-    Error404Component
+    Error404Component,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
