@@ -17,13 +17,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link active bg-secondary dropdown-toggle" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorias
+                            Categories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li *ngFor="let categoria of categorias"><a class="dropdown-item"
-                                    [routerLink]="['/category/:']">Categoria 1</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
+                            <li *ngFor="let categoria of categorias;let ultimo = last"><a class="dropdown-item"
+                                    [routerLink]="['/category', categoria.titulo.toLowerCase()]">{{categoria.titulo}}</a>
+                                <hr *ngIf="ultimo === false" class="dropdown-divider">
+                            </li>
                         </ul>
                     </li>
                 </ul>
