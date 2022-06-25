@@ -18,7 +18,7 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       /* console.log(params) */
-      let id: number = params['id'];
+      let id: number = parseInt(params['id']);
       this.myPost = this.postService.getById(id)
     })
   }
