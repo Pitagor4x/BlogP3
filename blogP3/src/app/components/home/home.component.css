@@ -4,8 +4,14 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h6{
+    color:darkslategrey;
+   font-size: smaller;
+   line-height: 0.5rem;
 }

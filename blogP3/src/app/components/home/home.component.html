@@ -3,67 +3,17 @@
 </div>
 <div class="container p-3 mx-auto">
     <section id="home">
-        <h2 class="my-5">Todos los posts</h2>
-        <div class="row bg-secondary bg-opacity-10">
-            <article class="col-12 col-md-6 col-lg-4  rounded-3 p-4">
-                <h3>Titulo post</h3>
+        <h2 class="mt-5 mb-5 mx-auto w-50 bg-secondary text-white text-center p-3 rounded-3">HOME</h2>
+        <div class="row g-5">
+            <article *ngFor="let post of arrPosts" class="p-5 col-12 col-md-6 col-lg-4 rounded-3">
+                <h3 class="fw-bold p-1 bg-secondary bg-opacity-25 rounded-3">{{post.titulo}}</h3>
                 <figure>
-                    <img class="rounded-3" src="../../../assets/images/ER-avatars-5.jpg">
+                    <img class="rounded-3" [src]="post.imagen">
                 </figure>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui placeat similique sed vitae natus
-                    distinctio neque eius necessitatibus! Eius, ut?</p>
-                <button class="btn btn-secondary">Leer mas</button>
-            </article>
-            <article class="col-12 col-md-6 col-lg-4  rounded-3 p-4">
-                <h3>Titulo post</h3>
-                <figure>
-                    <img class="rounded-3" src="../../../assets/images/ER-avatars-5.jpg">
-                </figure>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui placeat similique sed vitae natus
-                    distinctio neque eius necessitatibus! Eius, ut?</p>
-                <button class="btn btn-secondary">Leer mas</button>
-            </article>
-            <article class="col-12 col-md-6 col-lg-4  rounded-3 p-4">
-                <h3>Titulo post</h3>
-                <figure>
-                    <img class="rounded-3" src="../../../assets/images/ER-avatars-5.jpg">
-                </figure>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui placeat similique sed vitae natus
-                    distinctio neque eius necessitatibus! Eius, ut?</p>
-                <button class="btn btn-secondary">Leer mas</button>
-            </article>
-            <article class="col-12 col-md-6 col-lg-4  rounded-3 p-4">
-                <h3>Titulo post</h3>
-                <figure>
-                    <img class="rounded-3" src="../../../assets/images/ER-avatars-5.jpg">
-                </figure>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui placeat similique sed vitae natus
-                    distinctio neque eius necessitatibus! Eius, ut?</p>
-                <button class="btn btn-secondary">Leer mas</button>
-            </article>
-            <article class="col-12 col-md-6 col-lg-4  rounded-3 p-4">
-                <h3>Titulo post</h3>
-                <figure>
-                    <img class="rounded-3" src="../../../assets/images/ER-avatars-5.jpg">
-                </figure>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui placeat similique sed vitae natus
-                    distinctio neque eius necessitatibus! Eius, ut?</p>
-                <button class="btn btn-secondary">Leer mas</button>
-            </article>
-            <article class="col-12 col-md-6 col-lg-4  rounded-3 p-4">
-                <h3>Titulo post</h3>
-                <figure>
-                    <img class="rounded-3" src="../../../assets/images/ER-avatars-5.jpg">
-                </figure>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui placeat similique sed vitae natus
-                    distinctio neque eius necessitatibus! Eius, ut?</p>
-                <button class="btn btn-secondary">Leer mas</button>
+                <hr class="w-75 mx-auto my-4">
+                <p class="p-1 mb-0 bg-secondary bg-opacity-25 rounded-3">{{post.texto}}</p>
+                <h6 class="my-3 text-secondary">{{post.autor}} - {{post.fecha}}</h6>
+                <button [routerLink]="['/post', post.id]" class="btn btn-secondary">Leer mas</button>
             </article>
         </div>
     </section>

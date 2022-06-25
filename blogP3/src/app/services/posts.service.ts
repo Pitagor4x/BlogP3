@@ -75,4 +75,7 @@ export class PostsService {
       },
     ]
   }
+  getAllPosts() {
+    return this.arrPost
+  }
 }
