@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.categorias = this.categoriesService.getAll
+    this.categorias = this.categoriesService.getAllCategories()
   }
 
 }
