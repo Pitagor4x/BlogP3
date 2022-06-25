@@ -1,11 +1,16 @@
 #hero{
-    background-image:url(../../../assets/images/Wallpaper_1920x1080_screenshot02.jpg);
+    background-image:url(../../../assets/images/Wallpaper_3840x2160_screenshot02.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: top;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media(max-width: 600px){
+    #hero{
+        background-image:url(../../../assets/images/Wallpaper_1080x1920_screenshot02.jpg);        
+    }
 }
