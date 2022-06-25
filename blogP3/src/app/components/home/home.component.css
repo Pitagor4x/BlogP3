@@ -9,14 +9,23 @@
     justify-content: center;
     align-items: center;
 }
+article{
+    transition: 0.3s;
+}
 
-@media(max-width: 600px){
-    #hero{
-        background-image:url(../../../assets/images/Wallpaper_1080x1920_screenshot02.jpg);        
-    }
+article:hover{
+    scale: 1.1;
+}
+
 h6{
     color:darkslategrey;
    font-size: smaller;
    line-height: 0.5rem;
 }
+
+@media(max-width: 600px){
+    #hero{
+        background-image:url(../../../assets/images/Wallpaper_1080x1920_screenshot02.jpg);        
+    }
+
 }

@@ -10,6 +10,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { Error404Component } from './components/error404/error404.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
+import { RecortarTextoPipe } from './pipes/recortar-texto.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeaderComponent } from './components/header/header.component';
     PostComponent,
     CategoryComponent,
     Error404Component,
-    HeaderComponent
+    HeaderComponent,
+    RecortarTextoPipe
   ],
   imports: [
     BrowserModule,
