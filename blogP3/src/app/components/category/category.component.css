@@ -11,3 +11,7 @@ article{
 article:hover{
     scale: 1.05;
 }
+
+figure{
+    cursor: pointer;
+}
