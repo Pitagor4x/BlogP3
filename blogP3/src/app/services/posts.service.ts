@@ -45,7 +45,7 @@ export class PostsService {
         autor: 'Pedro Bustamante',
         imagen: '../../assets/images/post3.jpg',
         fecha: '01/01/22',
-        categoria: 'Bosses',
+        categoria: 'Jefazos',
       },
       {
         id: 4,
@@ -86,6 +86,12 @@ export class PostsService {
   }
 
   getById(pId: number): Post | any {
-    return this.arrPost.find(post => post.id == pId)
+    return this.arrPost.find(post => post.id === pId)
+  }
+
+  getByCategories(pCategory: string): Post | any {
+
+    return this.arrPost.filter(post => post.categoria === pCategory)
+
   }
 }
