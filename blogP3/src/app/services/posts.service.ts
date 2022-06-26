@@ -97,9 +97,7 @@ export class PostsService {
   addPost(pData: any): boolean | any {
     pData.id = this.id
     let tiempo = Date.now();
-    console.log(tiempo)
     let hoy = new Date(tiempo)
-    console.log(hoy)
     pData.fecha = hoy.toLocaleDateString()
     let arrPostLength = this.arrPost.push(pData)
     this.id++
