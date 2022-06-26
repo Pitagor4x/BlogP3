@@ -11,7 +11,7 @@ import { PostsService } from 'src/app/services/posts.service';
 export class CategoryComponent implements OnInit {
 
   arrPosts: Post[] = []
-  myCategory: string = ""
+  myCategoryTitle: string = ""
   constructor(
     private postService: PostsService,
     private activatedRoute: ActivatedRoute
@@ -22,7 +22,7 @@ export class CategoryComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       let categoria: string = params['titulo'];
       this.arrPosts = this.postService.getByCategories(categoria[0].toUpperCase() + categoria.substring(1))
-
+      this.myCategoryTitle = categoria
     })
   }
 

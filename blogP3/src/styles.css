@@ -1,5 +1,23 @@
+@font-face {
+    font-family: 'mantiniaregular';
+    src: url('assets/fonts/webfontkit-20220514-114527/mantinia-webfont.woff2') format('woff2'),
+         url('assets/fonts/webfontkit-20220514-114527/mantinia-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --fuentePrincipal: 'mantiniaregular'; 
+    --colorPrincipal:rgb(253,187,45); 
+}
+
 img{
     width: 100%;
     height: auto;
     box-sizing: border-box;
+}
+
+h1,h2,h3{
+    font-weight: bold;
+    font-family: var(--fuentePrincipal);
 }

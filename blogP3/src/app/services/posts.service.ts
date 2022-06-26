@@ -9,6 +9,7 @@ import { Post } from '../interfaces/post.interface';
 export class PostsService {
   private arrPost: Post[] = [];
   private categories: Category[] = [];
+  private id: number = 7;
 
   constructor() {
     this.categories = [
@@ -26,7 +27,7 @@ export class PostsService {
         texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nulla, esse deleniti cum veritatis, harum, enim totam fuga voluptate facere vel pariatur quas illo impedit! Quia cum hic laudantium quam sed aperiam explicabo ipsam velit consectetur sint ipsa doloribus dolore harum consequatur nostrum iure nam error accusantium quas, quasi assumenda illo nisi? Tempora, optio. Labore fugiat iusto ratione perspiciatis at tenetur saepe explicabo odit quos commodi quo, ipsum quasi nobis blanditiis esse? Excepturi porro quam quisquam sequi rem voluptatem eaque quaerat, fuga obcaecati incidunt eveniet in dolorum quis est aut ipsum neque expedita. Quod ullam natus soluta ab atque voluptate!',
         autor: 'Pedro Bustamante',
         imagen: '../../assets/images/post1.jpg',
-        fecha: '01/01/22',
+        fecha: '01/1/22',
         categoria: 'Noticias',
       },
       {
@@ -35,7 +36,7 @@ export class PostsService {
         texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nulla, esse deleniti cum veritatis, harum, enim totam fuga voluptate facere vel pariatur quas illo impedit! Quia cum hic laudantium quam sed aperiam explicabo ipsam velit consectetur sint ipsa doloribus dolore harum consequatur nostrum iure nam error accusantium quas, quasi assumenda illo nisi? Tempora, optio. Labore fugiat iusto ratione perspiciatis at tenetur saepe explicabo odit quos commodi quo, ipsum quasi nobis blanditiis esse? Excepturi porro quam quisquam sequi rem voluptatem eaque quaerat, fuga obcaecati incidunt eveniet in dolorum quis est aut ipsum neque expedita. Quod ullam natus soluta ab atque voluptate!',
         autor: 'Pedro Bustamante',
         imagen: '../../assets/images/post2.jpg',
-        fecha: '01/01/22',
+        fecha: '01/1/22',
         categoria: 'Enemigos',
       },
       {
@@ -44,7 +45,7 @@ export class PostsService {
         texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nulla, esse deleniti cum veritatis, harum, enim totam fuga voluptate facere vel pariatur quas illo impedit! Quia cum hic laudantium quam sed aperiam explicabo ipsam velit consectetur sint ipsa doloribus dolore harum consequatur nostrum iure nam error accusantium quas, quasi assumenda illo nisi? Tempora, optio. Labore fugiat iusto ratione perspiciatis at tenetur saepe explicabo odit quos commodi quo, ipsum quasi nobis blanditiis esse? Excepturi porro quam quisquam sequi rem voluptatem eaque quaerat, fuga obcaecati incidunt eveniet in dolorum quis est aut ipsum neque expedita. Quod ullam natus soluta ab atque voluptate!',
         autor: 'Pedro Bustamante',
         imagen: '../../assets/images/post3.jpg',
-        fecha: '01/01/22',
+        fecha: '01/1/22',
         categoria: 'Jefazos',
       },
       {
@@ -53,7 +54,7 @@ export class PostsService {
         texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nulla, esse deleniti cum veritatis, harum, enim totam fuga voluptate facere vel pariatur quas illo impedit! Quia cum hic laudantium quam sed aperiam explicabo ipsam velit consectetur sint ipsa doloribus dolore harum consequatur nostrum iure nam error accusantium quas, quasi assumenda illo nisi? Tempora, optio. Labore fugiat iusto ratione perspiciatis at tenetur saepe explicabo odit quos commodi quo, ipsum quasi nobis blanditiis esse? Excepturi porro quam quisquam sequi rem voluptatem eaque quaerat, fuga obcaecati incidunt eveniet in dolorum quis est aut ipsum neque expedita. Quod ullam natus soluta ab atque voluptate!',
         autor: 'Pedro Bustamante',
         imagen: '../../assets/images/post4.jpg',
-        fecha: '01/01/22',
+        fecha: '01/1/22',
         categoria: 'Noticias',
       },
       {
@@ -62,7 +63,7 @@ export class PostsService {
         texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nulla, esse deleniti cum veritatis, harum, enim totam fuga voluptate facere vel pariatur quas illo impedit! Quia cum hic laudantium quam sed aperiam explicabo ipsam velit consectetur sint ipsa doloribus dolore harum consequatur nostrum iure nam error accusantium quas, quasi assumenda illo nisi? Tempora, optio. Labore fugiat iusto ratione perspiciatis at tenetur saepe explicabo odit quos commodi quo, ipsum quasi nobis blanditiis esse? Excepturi porro quam quisquam sequi rem voluptatem eaque quaerat, fuga obcaecati incidunt eveniet in dolorum quis est aut ipsum neque expedita. Quod ullam natus soluta ab atque voluptate!',
         autor: 'Pedro Bustamante',
         imagen: '../../assets/images/post5.jpg',
-        fecha: '01/01/22',
+        fecha: '01/1/22',
         categoria: 'Quests',
       },
       {
@@ -71,7 +72,7 @@ export class PostsService {
         texto: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nulla, esse deleniti cum veritatis, harum, enim totam fuga voluptate facere vel pariatur quas illo impedit! Quia cum hic laudantium quam sed aperiam explicabo ipsam velit consectetur sint ipsa doloribus dolore harum consequatur nostrum iure nam error accusantium quas, quasi assumenda illo nisi? Tempora, optio.Labore fugiat iusto ratione perspiciatis at tenetur saepe explicabo odit quos commodi quo, ipsum quasi nobis blanditiis esse? Excepturi porro quam quisquam sequi rem voluptatem eaque quaerat, fuga obcaecati incidunt eveniet in dolorum quis est aut ipsum neque expedita. Quod ullam natus soluta ab atque voluptate!',
         autor: 'Pedro Bustamante',
         imagen: '../../assets/images/post6.jpg',
-        fecha: '01/01/22',
+        fecha: '01/1/22',
         categoria: 'Lore',
       },
     ]
@@ -90,8 +91,19 @@ export class PostsService {
   }
 
   getByCategories(pCategory: string): Post | any {
-
     return this.arrPost.filter(post => post.categoria === pCategory)
+  }
 
+  addPost(pData: any): boolean | any {
+    pData.id = this.id
+    let tiempo = Date.now();
+    console.log(tiempo)
+    let hoy = new Date(tiempo)
+    console.log(hoy)
+    pData.fecha = hoy.toLocaleDateString()
+    let arrPostLength = this.arrPost.push(pData)
+    this.id++
+
+    return (arrPostLength) ? true : false
   }
 }

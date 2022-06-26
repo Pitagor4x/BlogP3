@@ -1,6 +1,6 @@
 <div class="container">
     <section>
-        <h2 class="mt-5 mb-5 mx-auto w-50 bg-secondary text-white text-center p-3 rounded-3">Titulo seccion</h2>
+        <h2 class="mt-5 mb-5 mx-auto w-50 bg-secondary text-white text-center p-3 rounded-3">{{myCategoryTitle}}</h2>
         <article *ngFor="let post of arrPosts" class="shadow p-4 m-5 bg-secondary bg-opacity-25 rounded-3">
             <div class="d-flex justify-content-between mb-2">
                 <button [routerLink]="['/home']" class="btn btn-secondary"><i class="fa-solid fa-house"></i></button>

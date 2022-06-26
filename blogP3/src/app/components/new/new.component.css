@@ -1,0 +1,13 @@
+input.ng-valid.ng-touched, select.ng-valid.ng-touched, textarea.ng-valid.ng-touched {
+    border-left: 5px solid lightgreen;
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+    border-left: 5px solid tomato;
+}
+
+.msg{
+    background-color: rgba(255, 99, 71, 0.15) ;
+    color: tomato;
+    font-size: 0.8em;
+}
