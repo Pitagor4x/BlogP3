@@ -3,3 +3,11 @@ img{
     height: auto;
     box-sizing: border-box;
 }
+
+article{
+    transition: 0.3s;
+}
+
+article:hover{
+    scale: 1.05;
+}

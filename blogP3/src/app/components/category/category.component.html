@@ -17,7 +17,9 @@
                 </div>
                 <div class="col-12 col-lg-9">
                     <hr>
-                    <p class="bg-white bg-opacity-50 shadow p-3 rounded-3">{{post.texto}}</p>
+                    <p class="bg-white bg-opacity-50 shadow p-3 rounded-3">{{post.texto | recortarTexto}}
+                        <button [routerLink]="['/post', post.id]" class="btn btn-secondary p-1 m-2">Leer mas</button>
+                    </p>
                     <hr>
                 </div>
             </div>
