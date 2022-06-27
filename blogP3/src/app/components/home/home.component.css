@@ -1,0 +1,32 @@
+#hero{
+    background-image:url(../../../assets/images/Wallpaper_3840x2160_screenshot02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article{
+    transition: 0.3s;
+}
+
+article:hover{
+    scale: 1.05;
+    
+}
+
+h6{
+    color:darkslategrey;
+   font-size: smaller;
+   line-height: 0.5rem;
+}
+
+@media(max-width: 600px){
+    #hero{
+        background-image:url(../../../assets/images/Wallpaper_1080x1920_screenshot02.jpg);        
+    }
+
+}
